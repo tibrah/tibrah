@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project: Legacy Case Processing System Modernization</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    body {
+        width: 1280px; 
+        height: 720px; 
+        overflow: hidden; 
+        margin: 0;
+        padding: 0;
+    }
+    .slide {
+        width: 1280px;
+        height: 720px;
+        position: relative;
+        background-color: white;
+        color: #333;
+        font-family: Arial, sans-serif;
+    }
+    .header-bar {
+        background-color: #008080;
+        height: 70px;
+        width: 100%;
+        position: relative;
+    }
+    .header-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 15px 40px;
+        display: flex;
+        align-items: center;
+    }
+    .action-item {
+        border-left: 3px solid #008080;
+        padding-left: 12px;
+        margin-bottom: 8px;
+    }
+    .result-box {
+        background-color: #f8f8f8;
+        border-radius: 8px;
+        padding: 12px;
+    }
+    .bar {
+        fill: #008080;
+        transition: all 0.3s ease;
+    }
+    .bar:hover {
+        fill: #FFA500;
+    }
+</style>
+</head>
+<body>
+<div class="slide">
+<!-- Header Bar -->
+<div class="header-bar">
+<div class="header-content">
+<h1 class="text-white text-3xl font-bold">Project: Legacy Case Processing System Modernization</h1>
+</div>
+</div>
+<!-- Main Content -->
+<div class="p-6 grid grid-cols-12 gap-5">
+<!-- Left Column: Project Background -->
+<div class="col-span-4">
+<div class="bg-gray-50 p-4 rounded-lg h-full">
+<h2 class="text-xl font-semibold text-teal-700 mb-3">
+<i class="fas fa-building text-orange-500 mr-2"></i>Energie NB Power Challenge
+</h2>
+<div class="mb-4">
+<h3 class="text-lg font-medium text-gray-700 mb-2">The Problem:</h3>
+<ul class="text-gray-600 space-y-2">
+<li class="flex items-start">
+<i class="fas fa-exclamation-circle text-red-500 mt-1 mr-2"></i>
+<span>Legacy case processing system with outdated workflows causing operational inefficiencies</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-exclamation-circle text-red-500 mt-1 mr-2"></i>
+<span>Siloed departments with inconsistent processes and limited visibility</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-exclamation-circle text-red-500 mt-1 mr-2"></i>
+<span>High manual effort required for cross-departmental case management</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-medium text-gray-700 mb-2">The Solution:</h3>
+<div class="bg-white p-3 rounded-lg border-l-4 border-orange-500">
+<p class="text-gray-600">Comprehensive modernization of the case processing system with configurable workflows, integrated dashboards, and automated notifications to streamline operations across departments.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Middle Column: My Role &amp; Actions -->
+<div class="col-span-4">
+<div class="bg-gray-50 p-4 rounded-lg h-full">
+<h2 class="text-xl font-semibold text-teal-700 mb-3">
+<i class="fas fa-user-tie text-orange-500 mr-2"></i>My Role &amp; Actions
+</h2>
+<div class="space-y-3">
+<div class="action-item">
+<h3 class="text-lg font-medium text-gray-700">Stakeholder Liaison</h3>
+<p class="text-gray-600 text-sm">Served as bridge between product managers, engineers, and multi-department stakeholders throughout the project lifecycle.</p>
+</div>
+<div class="action-item">
+<h3 class="text-lg font-medium text-gray-700">Discovery Workshops</h3>
+<p class="text-gray-600 text-sm">Conducted 30+ workshops capturing business goals, user needs, and technical requirements across departments.</p>
+</div>
+<div class="action-item">
+<h3 class="text-lg font-medium text-gray-700">Requirements Documentation</h3>
+<p class="text-gray-600 text-sm">Authored BRDs, user stories, and acceptance criteria ensuring features were testable and aligned with product strategy.</p>
+</div>
+<div class="action-item">
+<h3 class="text-lg font-medium text-gray-700">Technical Collaboration</h3>
+<p class="text-gray-600 text-sm">Worked with technical teams on system integrations and configurable platform requirements, documenting workflows and interface points.</p>
+</div>
+<div class="action-item">
+<h3 class="text-lg font-medium text-gray-700">Process Modeling</h3>
+<p class="text-gray-600 text-sm">Designed process models identifying key gaps and opportunities for operational efficiency improvements.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Results -->
+<div class="col-span-4">
+<div class="bg-gray-50 p-4 rounded-lg h-full">
+<h2 class="text-xl font-semibold text-teal-700 mb-3">
+<i class="fas fa-chart-line text-orange-500 mr-2"></i>Project Results
+</h2>
+<div class="result-box mb-3">
+<div class="text-center mb-2">
+<span class="text-lg font-bold text-teal-700">Key Metrics</span>
+</div>
+<div class="w-full h-44" id="chart"></div>
+</div>
+<div class="bg-white p-3 rounded-lg border-l-4 border-teal-600">
+<h3 class="text-lg font-medium text-gray-700 mb-2">Key Achievements</h3>
+<ul class="text-gray-600 space-y-2">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-teal-600 mt-1 mr-2"></i>
+<span>Projected 25% operational efficiency gain through streamlined workflows</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-teal-600 mt-1 mr-2"></i>
+<span>Executed comprehensive change management strategy (training, communications)</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-teal-600 mt-1 mr-2"></i>
+<span>Achieved 95% system adoption rate within three months of implementation</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide Number -->
+<div class="absolute bottom-4 right-4 text-gray-500" style="visibility: hidden;">
+    3/9
+</div>
+</div>
+<script>
+    // D3.js Chart
+    document.addEventListener('DOMContentLoaded', function() {
+        // Updated data based on new metrics
+        const data = [
+            {label: "Operational Efficiency", value: 25, color: "#008080", icon: "fa-cogs"},
+            {label: "Adoption Rate", value: 95, color: "#FFA500", icon: "fa-users"}
+        ];
+
+        const width = 300;
+        const height = 170;
+        const margin = {top: 20, right: 20, bottom: 60, left: 40};
+
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.label))
+            .range([margin.left, width - margin.right])
+            .padding(0.3);
+
+        const y = d3.scaleLinear()
+            .domain([0, 100]) // Max value is 95%, using 100 as a buffer
+            .range([height - margin.bottom, margin.top]);
+
+        // Add bars
+        svg.selectAll(".bar")
+            .data(data)
+            .enter()
+            .append("rect")
+            .attr("class", "bar")
+            .attr("x", d => x(d.label))
+            .attr("y", d => y(d.value))
+            .attr("width", x.bandwidth())
+            .attr("height", d => height - margin.bottom - y(d.value))
+            .attr("rx", 4)
+            .attr("ry", 4)
+            .attr("fill", d => d.color);
+
+        // Add value labels on top of bars
+        svg.selectAll(".label")
+            .data(data)
+            .enter()
+            .append("text")
+            .attr("class", "label")
+            .attr("x", d => x(d.label) + x.bandwidth() / 2)
+            .attr("y", d => y(d.value) - 10)
+            .attr("text-anchor", "middle")
+            .text(d => d.value + "%")
+            .attr("fill", "#333")
+            .attr("font-size", "14px")
+            .attr("font-weight", "bold");
+
+        // Add x-axis labels
+        svg.selectAll(".x-label")
+            .data(data)
+            .enter()
+            .append("text")
+            .attr("class", "x-label")
+            .attr("x", d => x(d.label) + x.bandwidth() / 2)
+            .attr("y", height - margin.bottom + 30)
+            .attr("text-anchor", "middle")
+            .text(d => d.label.replace(/\s+/g, '\n'))
+            .attr("fill", "#555")
+            .attr("font-size", "12px");
+
+        // Add icons
+        svg.selectAll(".icon")
+            .data(data)
+            .enter()
+            .append("text")
+            .attr("class", d => "icon fa " + d.icon)
+            .attr("x", d => x(d.label) + x.bandwidth() / 2)
+            .attr("y", height - margin.bottom + 15)
+            .attr("text-anchor", "middle")
+            .attr("fill", d => d.color)
+            .attr("font-size", "14px")
+            .attr("font-family", "FontAwesome");
+    });
+</script>
+</body></html>

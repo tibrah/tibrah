@@ -1,0 +1,302 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Core Business Analyst Competencies</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    body {
+        width: 1280px; 
+        height: 720px; 
+        overflow: hidden; 
+        margin: 0;
+        padding: 0;
+    }
+    .slide {
+        width: 1280px;
+        height: 720px;
+        position: relative;
+        background-color: white;
+        color: #333;
+        font-family: Arial, sans-serif;
+    }
+    .header-bar {
+        background-color: #008080;
+        height: 70px;
+        width: 100%;
+        position: relative;
+    }
+    .header-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 15px 40px;
+        display: flex;
+        align-items: center;
+    }
+    .competency-card {
+        border-radius: 8px;
+        border-left: 5px solid;
+        transition: transform 0.3s ease;
+    }
+    .competency-card:hover {
+        transform: translateY(-5px);
+    }
+    .competency-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+    }
+    .skill-tag {
+        background-color: #f0f0f0;
+        border-radius: 20px;
+        padding: 4px 10px;
+        font-size: 0.9rem;
+        margin: 3px;
+        display: inline-block;
+        transition: all 0.2s ease;
+    }
+    .skill-tag:hover {
+        background-color: #e0e0e0;
+        transform: scale(1.05);
+    }
+</style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.bottom-4{bottom:1rem}.right-4{right:1rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mr-1{margin-right:0.25rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.grid{display:grid}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.gap-5{gap:1.25rem}.border-l-2{border-left-width:2px}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254 / var(--tw-border-opacity, 1))}.border-blue-500{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.border-orange-200{--tw-border-opacity:1;border-color:rgb(254 215 170 / var(--tw-border-opacity, 1))}.border-orange-500{--tw-border-opacity:1;border-color:rgb(249 115 22 / var(--tw-border-opacity, 1))}.border-teal-200{--tw-border-opacity:1;border-color:rgb(153 246 228 / var(--tw-border-opacity, 1))}.border-teal-600{--tw-border-opacity:1;border-color:rgb(13 148 136 / var(--tw-border-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-orange-100{--tw-bg-opacity:1;background-color:rgb(255 237 213 / var(--tw-bg-opacity, 1))}.bg-teal-100{--tw-bg-opacity:1;background-color:rgb(204 251 241 / var(--tw-bg-opacity, 1))}.p-4{padding:1rem}.p-6{padding:1.5rem}.pl-3{padding-left:0.75rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-orange-600{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.text-teal-600{--tw-text-opacity:1;color:rgb(13 148 136 / var(--tw-text-opacity, 1))}.text-teal-700{--tw-text-opacity:1;color:rgb(15 118 110 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.bottom-4{bottom:1rem}.right-4{right:1rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mr-1{margin-right:0.25rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.grid{display:grid}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.gap-5{gap:1.25rem}.border-l-2{border-left-width:2px}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254 / var(--tw-border-opacity, 1))}.border-blue-500{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.border-orange-200{--tw-border-opacity:1;border-color:rgb(254 215 170 / var(--tw-border-opacity, 1))}.border-orange-500{--tw-border-opacity:1;border-color:rgb(249 115 22 / var(--tw-border-opacity, 1))}.border-teal-200{--tw-border-opacity:1;border-color:rgb(153 246 228 / var(--tw-border-opacity, 1))}.border-teal-600{--tw-border-opacity:1;border-color:rgb(13 148 136 / var(--tw-border-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-orange-100{--tw-bg-opacity:1;background-color:rgb(255 237 213 / var(--tw-bg-opacity, 1))}.bg-teal-100{--tw-bg-opacity:1;background-color:rgb(204 251 241 / var(--tw-bg-opacity, 1))}.p-4{padding:1rem}.p-6{padding:1.5rem}.pl-3{padding-left:0.75rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-orange-600{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.text-teal-600{--tw-text-opacity:1;color:rgb(13 148 136 / var(--tw-text-opacity, 1))}.text-teal-700{--tw-text-opacity:1;color:rgb(15 118 110 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}</style></head>
+<body class="" style="">
+<div class="slide">
+<!-- Header Bar -->
+<div class="header-bar">
+<div class="header-content">
+<h1 class="text-white text-3xl font-bold">Core Business Analyst Competencies</h1>
+</div>
+</div>
+<!-- Main Content -->
+<div class="p-6">
+<!-- Introduction -->
+<div class="mb-4 text-center">
+<p class="text-gray-700 text-lg">
+    Key skills directly relevant to translating business needs into technical solutions for Masabi
+</p>
+</div>
+<!-- Competencies Grid -->
+<div class="grid grid-cols-3 gap-5">
+<!-- Requirements &amp; Documentation -->
+<div class="competency-card border-teal-600 bg-gray-50 p-4 shadow-md">
+<div class="flex items-center mb-3">
+<div class="competency-icon bg-teal-100 text-teal-600">
+<i class="fas fa-file-alt text-2xl"></i>
+</div>
+<h2 class="text-xl font-bold text-teal-700">Requirements &amp; Documentation</h2>
+</div>
+<div class="pl-3 border-l-2 border-teal-200 mb-3">
+<p class="text-gray-700">Capturing and documenting business needs</p>
+</div>
+<div class="flex flex-wrap">
+<span class="skill-tag"><i class="fas fa-search mr-1 text-teal-600"></i> Requirements Gathering</span>
+<span class="skill-tag"><i class="fas fa-file-alt mr-1 text-teal-600"></i> User Story Documentation</span>
+<span class="skill-tag"><i class="fas fa-check-square mr-1 text-teal-600"></i> Acceptance Criteria</span>
+<span class="skill-tag"><i class="fas fa-file-contract mr-1 text-teal-600"></i> BRDs</span>
+<span class="skill-tag"><i class="fas fa-project-diagram mr-1 text-teal-600"></i> Business Process Modeling</span>
+<span class="skill-tag"><i class="fas fa-sitemap mr-1 text-teal-600"></i> BPMN</span>
+<span class="skill-tag"><i class="fas fa-object-group mr-1 text-teal-600"></i> Visio</span>
+</div>
+</div>
+<!-- Technical &amp; Systems -->
+<div class="competency-card border-blue-500 bg-gray-50 p-4 shadow-md">
+<div class="flex items-center mb-3">
+<div class="competency-icon bg-blue-100 text-blue-500">
+<i class="fas fa-cogs text-2xl"></i>
+</div>
+<h2 class="text-xl font-bold text-blue-600">Technical &amp; Systems</h2>
+</div>
+<div class="pl-3 border-l-2 border-blue-200 mb-3">
+<p class="text-gray-700">Integration and platform expertise</p>
+</div>
+<div class="flex flex-wrap">
+<span class="skill-tag"><i class="fas fa-plug mr-1 text-blue-500"></i> API Integrations</span>
+<span class="skill-tag"><i class="fas fa-sliders-h mr-1 text-blue-500"></i> Configurable Platforms</span>
+<span class="skill-tag"><i class="fas fa-credit-card mr-1 text-blue-500"></i> Payments Systems</span>
+<span class="skill-tag"><i class="fas fa-exchange-alt mr-1 text-blue-500"></i> Transaction Systems</span>
+<span class="skill-tag"><i class="fas fa-desktop mr-1 text-blue-500"></i> Portal Design</span>
+<span class="skill-tag"><i class="fas fa-sitemap mr-1 text-blue-500"></i><span class="sk-text-wrapper-tag"> Workflow Documentation</span></span>
+<span class="skill-tag"><i class="fas fa-search-minus mr-1 text-blue-500"></i> Gap Analysis</span>
+</div>
+</div>
+<!-- Methodologies &amp; Collaboration -->
+<div class="competency-card border-orange-500 bg-gray-50 p-4 shadow-md">
+<div class="flex items-center mb-3">
+<div class="competency-icon bg-orange-100 text-orange-500">
+<i class="fas fa-users text-2xl"></i>
+</div>
+<h2 class="text-xl font-bold text-orange-600">Methodologies &amp; Collaboration</h2>
+</div>
+<div class="pl-3 border-l-2 border-orange-200 mb-3">
+<p class="text-gray-700">Process frameworks and stakeholder engagement</p>
+</div>
+<div class="flex flex-wrap">
+<span class="skill-tag"><i class="fas fa-sync-alt mr-1 text-orange-500"></i> Agile/Scrum Methodologies</span>
+<span class="skill-tag"><i class="fab fa-jira mr-1 text-orange-500"></i> Jira</span>
+<span class="skill-tag"><i class="fab fa-confluence mr-1 text-orange-500"></i> Confluence</span>
+<span class="skill-tag"><i class="fas fa-chalkboard-teacher mr-1 text-orange-500"></i> Stakeholder Workshops</span>
+<span class="skill-tag"><i class="fas fa-handshake mr-1 text-orange-500"></i> External Partner Facilitation</span>
+<span class="skill-tag"><i class="fas fa-exchange-alt mr-1 text-orange-500"></i> Change Management</span>
+<span class="skill-tag"><i class="fas fa-comments mr-1 text-orange-500"></i> Communication</span>
+<span class="skill-tag"><i class="fas fa-lightbulb mr-1 text-orange-500"></i> Sustainable Solutions Design</span>
+</div>
+</div>
+</div>
+<!-- Bottom Section - Skills Visualization -->
+<div class="mt-6">
+<div class="flex justify-center" id="skills-radar">
+<!-- D3.js Radar Chart will be rendered here -->
+</div>
+</div>
+</div>
+<!-- Slide Number -->
+<div class="absolute bottom-4 right-4 text-gray-500" style="visibility: hidden;">
+    5/9
+</div>
+</div>
+<script>
+    // D3.js Radar Chart
+    (function() {
+        // Updated data for the radar chart - based on the new competencies
+        const data = [
+            { axis: "Requirements Gathering", value: 0.95 },
+            { axis: "User Story Documentation", value: 0.92 },
+            { axis: "Business Process Modeling", value: 0.88 },
+            { axis: "API Integrations", value: 0.85 },
+            { axis: "Payments Systems", value: 0.82 },
+            { axis: "Agile/Scrum", value: 0.90 },
+            { axis: "Stakeholder Workshops", value: 0.93 },
+            { axis: "Portal Design", value: 0.87 },
+            { axis: "Change Management", value: 0.85 },
+            { axis: "Gap Analysis", value: 0.89 }
+        ];
+
+        // Radar chart configuration
+        const margin = { top: 50, right: 50, bottom: 50, left: 50 };
+        const width = 600 - margin.left - margin.right;
+        const height = 180 - margin.top - margin.bottom;
+
+        // Number of axes (dimensions)
+        const allAxis = data.map(d => d.axis);
+        const total = allAxis.length;
+        const radius = Math.min(width / 2, height) / 1.8;
+
+        // Angle for each axis
+        const angleSlice = Math.PI * 2 / total;
+
+        // Scale for the radius
+        const rScale = d3.scaleLinear()
+            .range([0, radius])
+            .domain([0, 1]);
+
+        // Create the SVG container
+        const svg = d3.select("#skills-radar")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left + width / 2}, ${margin.top + height / 2})`);
+
+        // Draw the circular grid
+        const axisGrid = svg.append("g").attr("class", "axis-grid");
+
+        // Draw the levels
+        const levels = 5;
+        axisGrid.selectAll(".levels")
+            .data(d3.range(1, levels + 1).reverse())
+            .enter()
+            .append("circle")
+            .attr("class", "grid-circle")
+            .attr("r", d => radius / levels * d)
+            .style("fill", "none")
+            .style("stroke", "#CDCDCD")
+            .style("stroke-width", "0.5px");
+
+        // Text indicating level
+        axisGrid.append("text")
+            .attr("class", "legend")
+            .attr("x", 0)
+            .attr("y", 0)
+            .attr("text-anchor", "middle")
+            .style("font-size", "10px")
+            .style("fill", "#737373")
+            .text("100%");
+
+        // Draw the axes
+        const axis = axisGrid.selectAll(".axis")
+            .data(allAxis)
+            .enter()
+            .append("g")
+            .attr("class", "axis");
+
+        // Draw axis lines
+        axis.append("line")
+            .attr("x1", 0)
+            .attr("y1", 0)
+            .attr("x2", (d, i) => rScale(1.1) * Math.cos(angleSlice * i - Math.PI / 2))
+            .attr("y2", (d, i) => rScale(1.1) * Math.sin(angleSlice * i - Math.PI / 2))
+            .style("stroke", "#CDCDCD")
+            .style("stroke-width", "1px");
+
+        // Draw axis labels
+        axis.append("text")
+            .attr("class", "legend")
+            .attr("text-anchor", "middle")
+            .attr("dy", "0.35em")
+            .attr("x", (d, i) => rScale(1.15) * Math.cos(angleSlice * i - Math.PI / 2))
+            .attr("y", (d, i) => rScale(1.15) * Math.sin(angleSlice * i - Math.PI / 2))
+            .text(d => d)
+            .style("font-size", "9px")
+            .style("fill", "#333333");
+
+        // Draw the radar chart blobs
+        const radarLine = d3.lineRadial()
+            .curve(d3.curveLinearClosed)
+            .radius(d => rScale(d.value))
+            .angle((d, i) => i * angleSlice);
+
+        // Create the radar area
+        svg.append("path")
+            .datum(data)
+            .attr("class", "radar-area")
+            .attr("d", radarLine)
+            .style("fill", "#008080")
+            .style("fill-opacity", 0.3)
+            .style("stroke", "#008080")
+            .style("stroke-width", "2px");
+
+        // Create the radar vertices
+        svg.selectAll(".radar-vertices")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("class", "radar-vertices")
+            .attr("r", 4)
+            .attr("cx", (d, i) => rScale(d.value) * Math.cos(angleSlice * i - Math.PI / 2))
+            .attr("cy", (d, i) => rScale(d.value) * Math.sin(angleSlice * i - Math.PI / 2))
+            .style("fill", "#FFA500")
+            .style("stroke", "#fff")
+            .style("stroke-width", "1px");
+
+        // Add a title to the chart
+        svg.append("text")
+            .attr("x", 0)
+            .attr("y", -height / 2 + 15)
+            .attr("text-anchor", "middle")
+            .style("font-size", "14px")
+            .style("font-weight", "bold")
+            .style("fill", "#333333")
+            .text("Core Competency Strengths");
+    })();
+</script>
+</body></html>
