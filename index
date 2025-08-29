@@ -1,4 +1,3 @@
-index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +8,13 @@ index.html
 </head>
 <body>
     <header>
-        <h1>Hello! I’m <Christopher Tunde Ibrahim>Your Name</Christopher Tunde Ibrahim></h1>
-        <p>Business Analyst • Product Owner • …</p>
+        <h1>Hello! I’m <strong>Your Name</strong></h1>
+        <p>Web developer • Designer • …</p>
     </header>
 
     <section id="projects">
         <h2>Projects</h2>
-        <!-- add your project cards here -->
+        <!-- Add project cards here -->
     </section>
 
     <footer>
