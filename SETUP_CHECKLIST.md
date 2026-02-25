@@ -52,4 +52,4 @@ Welcome! Follow these steps to get started contributing to the AIGS Website Proj
 
 Thank you for contributing!
 
-"Add Website Redesign File"
+"Add Projec: Website Redesign File"
